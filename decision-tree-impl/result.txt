@@ -1,0 +1,155 @@
+Accuracy: 0.8761061946902655
+              precision    recall  f1-score   support
+
+         1.0       0.91      0.98      0.95        62
+         2.0       0.90      0.67      0.77        27
+         3.0       0.77      0.83      0.80        24
+
+    accuracy                           0.88       113
+   macro avg       0.86      0.83      0.84       113
+weighted avg       0.88      0.88      0.87       113
+
+Feature importances: [0.02078693 0.09368939 0.00226772 0.03283437 0.         0.26064364
+ 0.04687845 0.42519851 0.03063992 0.08706106]
+|--- BMI Category <= 1.50
+|   |--- Physical Activity Level <= 65.00
+|   |   |--- Age <= 42.50
+|   |   |   |--- Stress Level <= 6.50
+|   |   |   |   |--- class: 1.0
+|   |   |   |--- Stress Level >  6.50
+|   |   |   |   |--- Gender <= 1.50
+|   |   |   |   |   |--- Sleep Duration <= 6.55
+|   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |--- Sleep Duration >  6.55
+|   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |--- Gender >  1.50
+|   |   |   |   |   |--- class: 2.0
+|   |   |--- Age >  42.50
+|   |   |   |--- Physical Activity Level <= 50.00
+|   |   |   |   |--- Age <= 44.50
+|   |   |   |   |   |--- Sleep Duration <= 6.45
+|   |   |   |   |   |   |--- Sleep Duration <= 6.35
+|   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |--- Sleep Duration >  6.35
+|   |   |   |   |   |   |   |--- Age <= 43.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |   |--- Age >  43.50
+|   |   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |--- Sleep Duration >  6.45
+|   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |--- Age >  44.50
+|   |   |   |   |   |--- Stress Level <= 5.00
+|   |   |   |   |   |   |--- Sleep Duration <= 6.55
+|   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |   |--- Sleep Duration >  6.55
+|   |   |   |   |   |   |   |--- class: 3.0
+|   |   |   |   |   |--- Stress Level >  5.00
+|   |   |   |   |   |   |--- class: 3.0
+|   |   |   |--- Physical Activity Level >  50.00
+|   |   |   |   |--- class: 1.0
+|   |--- Physical Activity Level >  65.00
+|   |   |--- Age <= 45.50
+|   |   |   |--- class: 1.0
+|   |   |--- Age >  45.50
+|   |   |   |--- Sleep Duration <= 6.15
+|   |   |   |   |--- Sleep Duration <= 6.05
+|   |   |   |   |   |--- Age <= 49.50
+|   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |--- Age >  49.50
+|   |   |   |   |   |   |--- Age <= 50.50
+|   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- Age >  50.50
+|   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |--- Sleep Duration >  6.05
+|   |   |   |   |   |--- class: 2.0
+|   |   |   |--- Sleep Duration >  6.15
+|   |   |   |   |--- Sleep Duration <= 8.15
+|   |   |   |   |   |--- Daily Steps <= 6000.00
+|   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |--- Daily Steps >  6000.00
+|   |   |   |   |   |   |--- Age <= 57.50
+|   |   |   |   |   |   |   |--- Daily Steps <= 8500.00
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- Daily Steps >  8500.00
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |--- Age >  57.50
+|   |   |   |   |   |   |   |--- Age <= 58.50
+|   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |--- Age >  58.50
+|   |   |   |   |   |   |   |   |--- Sleep Duration <= 8.05
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |   |   |   |   |--- Sleep Duration >  8.05
+|   |   |   |   |   |   |   |   |   |--- class: 2.0
+|   |   |   |   |--- Sleep Duration >  8.15
+|   |   |   |   |   |--- class: 2.0
+|--- BMI Category >  1.50
+|   |--- Daily Steps <= 4550.00
+|   |   |--- Heart Rate <= 84.00
+|   |   |   |--- class: 3.0
+|   |   |--- Heart Rate >  84.00
+|   |   |   |--- class: 2.0
+|   |--- Daily Steps >  4550.00
+|   |   |--- Age <= 38.50
+|   |   |   |--- Sleep Duration <= 6.05
+|   |   |   |   |--- Age <= 32.50
+|   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- Age >  32.50
+|   |   |   |   |   |--- class: 1.0
+|   |   |   |--- Sleep Duration >  6.05
+|   |   |   |   |--- Occupation <= 8.00
+|   |   |   |   |   |--- Occupation <= 4.50
+|   |   |   |   |   |   |--- Gender <= 1.50
+|   |   |   |   |   |   |   |--- Sleep Duration <= 7.65
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- Sleep Duration >  7.65
+|   |   |   |   |   |   |   |   |--- Age <= 30.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- Age >  30.50
+|   |   |   |   |   |   |   |   |   |--- Sleep Duration <= 7.75
+|   |   |   |   |   |   |   |   |   |   |--- Age <= 31.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |   |--- Age >  31.50
+|   |   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |   |--- Sleep Duration >  7.75
+|   |   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- Gender >  1.50
+|   |   |   |   |   |   |   |--- Sleep Duration <= 7.15
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- Sleep Duration >  7.15
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- Occupation >  4.50
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- Occupation >  8.00
+|   |   |   |   |   |--- Sleep Duration <= 7.20
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- Sleep Duration >  7.20
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |--- Age >  38.50
+|   |   |   |--- Sleep Duration <= 8.35
+|   |   |   |   |--- Sleep Duration <= 8.25
+|   |   |   |   |   |--- Sleep Duration <= 7.65
+|   |   |   |   |   |   |--- Physical Activity Level <= 80.00
+|   |   |   |   |   |   |   |--- Stress Level <= 5.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- Stress Level >  5.50
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- Physical Activity Level >  80.00
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- Sleep Duration >  7.65
+|   |   |   |   |   |   |--- Occupation <= 6.50
+|   |   |   |   |   |   |   |--- Sleep Duration <= 7.75
+|   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |--- Sleep Duration >  7.75
+|   |   |   |   |   |   |   |   |--- Gender <= 1.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |   |   |--- Gender >  1.50
+|   |   |   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |   |--- Occupation >  6.50
+|   |   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |--- Sleep Duration >  8.25
+|   |   |   |   |   |--- Age <= 51.50
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |   |   |   |--- Age >  51.50
+|   |   |   |   |   |   |--- class: 1.0
+|   |   |   |--- Sleep Duration >  8.35
+|   |   |   |   |--- class: 1.0
